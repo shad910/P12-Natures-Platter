@@ -31,7 +31,8 @@
             clifford: '#da373d',
             "green-color": '#179800',
             "black-color": '#111111',
-            "white-color": '#EFEBE3',
+            "white-color": '#FFFFFF',
+            "bg-color": '#EFEBE3',
               
           }
         }
@@ -54,73 +55,170 @@
 <body class="sora">
 
   <!-- Header Section -->
-  <header class=" bg-gradient-to-t from-[#FFFFFF] to-[#EFEBE3]">
-    <section class="w-11/12 mx-auto py-3">
+  <header class="py-3 bg-gradient-to-t from-[#FFFFFF] to-[#EFEBE3]">
 
-      <!-- Navigation Section -->
-      <nav class="navbar">
+    <!-- Navigation Section -->
+    <nav class="navbar w-11/12 mx-auto">
 
-        <!-- Header Logo/Image Section -->
-        <div class="navbar-start">
-          <a href="index.html"><img class="w-[124px] h-[48px]" src="./images/logo-header.png" alt=""></a>
+      <!-- Header Logo/Image Section -->
+      <div class="navbar-start">
+        <a href="index.html"><img class="w-[124px] h-[48px]" src="./images/logo-header.png" alt=""></a>
+      </div>
+
+      <!-- Navigation Hyperlink Anchor Point Section {Desktop-View} -->
+      <div class="navbar-center hidden lg:flex">
+        <!-- Nav Option -->
+        <ul class="menu menu-horizontal px-1 ">
+          <li><a href="#" class="text-base text-black-color">Product</a></li>
+          <li><a href="#" class="text-base text-black-color">Services</a></li>
+          <li><a href="#" class="text-base text-black-color">Contact us</a></li>
+        </ul>
+      </div>
+
+      <!-- NavBar Button Section -->
+      <div class="navbar-end">
+        <div class="hidden lg:flex justify-center items-center gap-2">
+          <a href=""><i class="fa-solid fa-magnifying-glass text-xl mr-4"></i></i></a>
+          <a href=""><i class="fa-solid fa-cart-shopping text-xl mr-4"></i></a>
+          <a class="btn px-6 py-2 text-base text-black-color bg-transparent border border-green-color hover:text-green-color hover:bg-text-[#EFEBE3]">Login</a>
+          <a class="btn px-6 py-2 text-base text-[#EFEBE3] bg-green-color hover:text-green-color hover:bg-text-[#EFEBE3]">Register</a>
         </div>
 
-        <!-- Navigation Hyperlink Anchor Point Section {Desktop-View} -->
-        <div class="navbar-center hidden lg:flex">
-          <ul class="menu menu-horizontal px-1 ">
-            <li><a class="text-base text-black-color">Product</a></li>
-            <li><a class="text-base text-black-color">Services</a></li>
-            <li><a class="text-base text-black-color">Contact us</a></li>
+        <!-- Navigation Hyperlink Anchor Point Section for {Mobile-Phone-View}-->
+        <div class="dropdown dropdown-end">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <i class="fa-solid fa-bars text-2xl text-green-color "></i>
+          </div>
+          <!-- Nav Option -->
+          <ul
+            tabindex="0"
+            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+            <li><a href="#" class="text-base black-color">Product</a></li>
+            <li><a href="#" class="text-base black-color">Services</a></li>
+            <li><a href="#" class="text-base black-color">Contact us</a></li>
           </ul>
+
         </div>
-
-        <!-- NavBar Button Section -->
-        <div class="navbar-end">
-          <div class="hidden lg:flex justify-center items-center gap-2">
-            <a href=""><i class="fa-solid fa-magnifying-glass text-xl mr-4"></i></i></a>
-            <a href=""><i class="fa-solid fa-cart-shopping text-xl mr-4"></i></a>
-            <a class="btn px-6 py-2 text-base text-black-color bg-transparent border border-green-color hover:text-green-color hover:bg-text-[#EFEBE3]">Login</a>
-            <a class="btn px-6 py-2 text-base text-[#EFEBE3] bg-green-color hover:text-green-color hover:bg-text-[#EFEBE3]">Register</a>
-          </div>
-
-          <!-- Navigation Hyperlink Anchor Point Section for {Mobile-Phone-View}-->
-          <div class="dropdown dropdown-end">
-            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-              <i class="fa-solid fa-bars text-2xl text-green-color "></i>
-            </div>
-
-            <ul
-              tabindex="0"
-              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-              <li><a class="text-base black-color">Product</a></li>
-              <li><a class="text-base black-color">Services</a></li>
-              <li><a class="text-base black-color">Contact us</a></li>
-            </ul>
-
-          </div>
         
-        </div>
+      </div>
       
-      </nav>
+    </nav>
 
-      <!-- Hero Section -->
-      <section class="w-11/12 mx-auto my-16 text-center space-y-6">
-        <h1 class="text-[2rem] md:text-[2.438rem] lg:text-[2.875rem] text-black-color font-bold]">Freshness <span class="text-green-color">You Can<br>Count</span> On, Prices You’ll Love!
-        </h1>
-        <p class="text-[0.75rem] lg:text-base text-black-color font-normal">Shop your daily essentials at unbeatable prices. From fresh produce to pantry<br>staples, we’ve got you covered every day!</p>
-        <div class="">
-          <img class="" src="./images/hero-vegetables.png" alt="">
-        </div>
-      </section>
+    <hr class="border border[0.5px] border-green-color lg:hidden">
+
+    <!-- Hero Section -->
+    <section class="w-11/12 mx-auto my-16 text-center space-y-6">
+
+      <!-- Section Title -->
+      <h1 class="text-[2rem] md:text-[2.438rem] lg:text-[2.875rem] text-black-color font-bold]">Freshness <span class="text-green-color">You Can<br>Count</span> On, Prices You’ll Love!
+      </h1>
+
+      <!-- Section Description -->
+      <p class="text-[0.75rem] lg:text-base text-black-color font-normal">Shop your daily essentials at unbeatable prices. From fresh produce to pantry<br>staples, we’ve got you covered every day!</p>
+
+      <!-- Image Container -->
+      <div class="">
+        <img class="" src="./images/hero-vegetables.png" alt="Hero-Vegetables">
+      </div>
 
     </section>
-  </header>
 
-  <hr class="border border[0.5px] border-green-color lg:hidden">
+  </header>
 
   <!-- Main Section -->
   <main>
 
+    <!-- Services Section -->
+    <section class="w-11/12 mx-auto my-16 space-y-9">
+
+      <!-- Section Title -->
+      <h2 class="text-3xl text-green-color font-semibold">Services</h2>
+
+      <!-- Card Container -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1.125rem]">
+
+        <!-- Card 1 -->
+        <div class="card card-compact bg-bg-color shadow-xl py-6">
+          <!-- Image Content -->
+          <div class="avatar flex justify-center items-center">
+            <!-- Image Container -->
+            <div class="w-24 rounded-full mb-[1.125rem] bg-white-color p-3">
+              <img src="./images/service.png" alt="24/7 Services" />
+            </div>
+          </div>
+          <!-- Text Content -->
+          <div class="card-body">
+            <!-- Title -->
+            <h4 class="text-[1.25rem] text-black-color text-center font-semibold mb-2">24/7 Services</h4>
+            <!-- Description -->
+            <p class="text-base text-black-color text-center font-light">Enjoy round-the-clock service, ensuring fresh and healthy products are always available when you need them!</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card card-compact bg-bg-color shadow-xl py-6">
+          <!-- Image Content -->
+          <div class="avatar flex justify-center items-center">
+            <!-- Image Container -->
+            <div class="w-24 rounded-full mb-[1.125rem] bg-white-color p-3">
+              <img src="./images/delivery.png" alt="Fast Delivery"/>
+            </div>
+          </div>
+          <!-- Text Content -->
+          <div class="card-body">
+            <!-- Title -->
+            <h4 class="text-[1.25rem] text-black-color text-center font-semibold mb-2">Fast Delivery</h4>
+            <!-- Description -->
+            <p class="text-base text-black-color text-center font-light">Get your fresh and healthy products delivered quickly with our efficient and reliable service!</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card card-compact bg-bg-color shadow-xl py-6">
+          <!-- Image Content -->
+          <div class="avatar flex justify-center items-center">
+            <!-- Image Container -->
+            <div class="w-24 rounded-full mb-[1.125rem] bg-white-color p-3 ">
+              <img src="./images/healthy.png" />
+            </div>
+          </div>
+          <!-- Text Content -->
+          <div class="card-body">
+            <!-- Title -->
+            <h4 class="text-[1.25rem] text-black-color text-center font-semibold mb-2">Healthy Products</h4>
+            <!-- Description -->
+            <p class="text-base text-black-color text-center font-light">Choose from a variety of fresh and nutritious products to support a healthy lifestyle!</p>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card card-compact bg-bg-color shadow-xl py-6 hidden md:block lg:hidden">
+          <!-- Image Content -->
+          <div class="avatar flex justify-center items-center">
+            <!-- Image Container -->
+            <div class="w-24 rounded-full mb-[1.125rem] bg-white-color p-3">
+              <img src="./images/service.png" />
+            </div>
+          </div>
+          <!-- Text Content -->
+          <div class="card-body">
+            <!-- Title -->
+            <h4 class="text-[1.25rem] text-black-color text-center font-semibold mb-2">24/7 Services </h4>
+            <!-- Description -->
+            <p class="text-base text-black-color text-center font-light">Enjoy round-the-clock service, ensuring fresh and healthy products are always available when you need them!</p>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Popular Products Section -->
+    <section class="my-16 bg-bg-color">
+      <div class="w-11/12 mx-auto space-y-9">
+        <h2>Popular Products</h2>
+      </div>
+    </section>
   </main>
 
   <!-- Footer Section -->
