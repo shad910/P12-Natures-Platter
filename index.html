@@ -53,6 +53,22 @@
   .poppins {
     font-family: "Poppins", serif;
   }
+
+  @keyframes fadeInUp {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .animate-fadeInUp {
+    animation: fadeInUp 1s ease-out forwards;
+  }
+
   </style>
       
   <!-- Webpage Title Section -->
@@ -63,7 +79,7 @@
 <body class="sora">
 
   <!-- Header Section -->
-  <header class="py-3 bg-gradient-to-t from-[#EFEBE3] to-[#FFFFFF]">
+  <header class="pt-3 bg-gradient-to-t from-[#EFEBE3] to-[#FFFFFF]">
 
     <!-- Navigation Section -->
     <nav class="navbar w-11/12 mx-auto">
@@ -88,8 +104,8 @@
         <div class="hidden lg:flex justify-center items-center gap-2">
           <a href=""><i class="fa-solid fa-magnifying-glass text-xl mr-4"></i></i></a>
           <a href=""><i class="fa-solid fa-cart-shopping text-xl mr-4"></i></a>
-          <a class="btn px-6 py-2 text-base text-black-color bg-transparent border border-green-color hover:text-green-color hover:bg-text-[#EFEBE3]">Login</a>
-          <a class="btn px-6 py-2 text-base text-[#EFEBE3] bg-green-color hover:text-green-color hover:bg-text-[#EFEBE3]">Register</a>
+          <a class="btn px-6 py-2 text-base text-black-color bg-transparent border border-green-color hover:text-green-color hover:bg-white-color hover:border-green-color">Login</a>
+          <a class="btn px-6 py-2 text-base text-[#EFEBE3] bg-green-color hover:text-green-color hover:bg-white-color hover:border-green-color">Register</a>
         </div>
 
         <!-- Navigation Hyperlink Anchor Point Section for {Mobile-Phone-View}-->
@@ -115,17 +131,17 @@
     <hr class="border border[0.5px] border-green-color lg:hidden">
 
     <!-- Hero Section -->
-    <section class="w-11/12 mx-auto my-16 text-center space-y-6">
+    <section class="w-11/12 mx-auto my-16 text-center space-y-6 transform translate-y-8 opacity-0 animate-fadeInUp">
 
       <!-- Section Title -->
-      <h1 class="text-[2rem] md:text-[2.438rem] lg:text-[2.875rem] text-black-color font-bold]">Freshness <span class="text-green-color">You Can<br>Count</span> On, Prices You’ll Love!
+      <h1 class="text-[2rem] md:text-[2.438rem] lg:text-[2.875rem] text-black-color font-bold">Freshness <span class="text-green-color">You Can<br>Count</span> On, Prices You’ll Love!
       </h1>
 
       <!-- Section Description -->
       <p class="text-[0.75rem] lg:text-base text-black-color font-normal">Shop your daily essentials at unbeatable prices. From fresh produce to pantry<br>staples, we’ve got you covered every day!</p>
 
       <!-- Image Container -->
-      <div class="">
+      <div class=" flex justify-center">
         <img class="" src="./images/hero-vegetables.png" alt="Hero-Vegetables">
       </div>
 
@@ -236,7 +252,7 @@
             <!-- Description -->
             <p class="text-sm text-black-color">Discover a world of treats, toys and<br>essentials handpicked for</p>
             <!-- Button Section -->
-            <a class="btn bg-white px-6 py-2 hover:text-green-600">Buy Now</a>
+            <a class="btn bg-white-color px-6 py-2 hover:text-green-600 hover:border-green-color">Buy Now</a>
             <figure class="flex justify-end">
               <img src="./images/products/vegetable-offer.png" alt="Green Leafy Vegetable and a Banana">
             </figure>
@@ -450,33 +466,43 @@
     
     <!-- Arrival & Offers Section -->
     <section class="w-11/12 mx-auto my-20 space-y-9">
+
+      <!-- Section Title -->
       <h2 class="text-3xl text-green-color font-semibold">Arrival & Offers</h2>
 
       <div class="poppins space-y-3 lg:space-y-0 lg:flex gap-5">
 
         <!-- Daawat Section -->
-        <div class="bg-[#115414] p-5 lg:p-10 rounded-2xl flex items-center gap-3 lg:gap-11">
-          <div class=" space-y-7">
-            <div>
+        <div class="bg-[#115414] p-4 lg:p-7 rounded-2xl flex items-center gap-3 lg:gap-11">
+          <div class="space-y-2 lg:space-y-7">
+            <!-- Image Container -->
+            <div class="mb-3">
               <div><img src="./images/logo/dawat-logo.png" alt="Daawat Logo"></div>
             </div>
-            <a href="" class="btn text-white bg-[#63B76D] border-none px-8">Cook Exotic Dishes</a>
-            <p class="text-3xl font-bold text-white-color">UP to 20% OFF</p>
+            <!-- Button Section -->
+            <a href="#" class="btn lg:px-8 text-xs lg:text-base text-white bg-[#63B76D] border-none hover:text-[#63B76D] whitespace-nowrap">Cook Exotic Dishes</a>
+            <!-- Description -->
+            <p class="text-xl lg:text-3xl font-bold text-white-color">UP to 20% OFF</p>
           </div>
+          <!-- Image Container -->
           <div>
             <img src="./images/products/dawat-mock-up.png" alt="Daawat Packet">
           </div>
         </div>
 
         <!-- India Gate Section -->
-        <div class="bg-[#102861] p-5 lg:p-7 rounded-2xl flex items-center gap-[68px] lg:gap-6">
-          <div class=" space-y-7">
+        <div class="bg-[#102861] p-4 lg:p-7 rounded-2xl flex justify-between items-center gap-12">
+          <div class="space-y-1 lg:space-y-7">
+            <!-- Image Container -->
             <div>
               <div><img src="./images/logo/india-gate-logo.png" alt="India Gate Logo"></div>
             </div>
-            <a href="" class="btn text-white bg-[#2A4D97] px-8 border-none whitespace-nowrap">World’s No.1 Rice</a>
-            <p class="text-3xl font-normal text-white-color whitespace-nowrap">UP to 40% OFF</p>
+            <!-- Button Section -->
+            <a href="#" class="btn lg:px-8 text-xs lg:text-base text-white bg-[#2A4D97] border-none hover:text-[#2A4D97] whitespace-nowrap">World’s No.1 Rice</a>
+            <!-- Description -->
+            <p class="text-xl lg:text-3xl font-normal text-white-color whitespace-nowrap">UP to 40% OFF</p>
           </div>
+          <!-- Image Container -->
           <div>
             <img src="./images/products/india-gate-mock-up.png" alt="India Gate Packet">
           </div>
@@ -492,7 +518,7 @@
         <h2 class="text-4xl font-semibold text-center mb-11">Happy <span class="text-green-color">Clients says</span></h2>
 
         <!-- Rating Container -->
-         <div class="grid justify-self-center grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-5 lg:gap-8 ">
+         <div class="grid justify-self-center self-center grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-5 lg:gap-8 ">
           
           <!-- Card 1 -->
           <div class="card card-compact bg-base-100 shadow-xl max-w-[284px] h-full hidden md:block">
@@ -609,11 +635,11 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="w-11/12 mx-auto my-32 ">
+    <section class="w-11/12 mx-auto mt-32 mb-[450px] lg:mb-[310px]">
 
-      <h2 class="mb-12 text-4xl font-semibold text-center">Frequently Asked <span class="text-green-">Questions</span></h2>
+      <h2 class="mb-12 text-4xl font-semibold text-center">Frequently Asked <span class="text-green-color">Questions</span></h2>
 
-      <div class="flex flex-col lg:flex-row justify-center items-center gap-y-14 lg:gap-x-20">
+      <div class="flex flex-col lg:flex-row justify-center items-center gap-y-14 lg:gap-x-16">
         <!-- Image Container  -->
         <div>
           <img src="./images/faq.png" class="w-[394px] h-[440px]" alt="FAQ Picture">
@@ -623,48 +649,67 @@
           <!-- Question 1 -->
           <div class="collapse collapse-arrow bg-base-200 mb-1">
             <input type="radio" name="my-accordion-2" checked="checked" />
-            <div class="collapse-title text-xl font-medium">What are the most important things<br>I should
-              know about riding a bike?</div>
+            <div class="collapse-title text-xl font-medium">What types of products do you offer?</div>
             <div class="collapse-content">
-              <p>Safety First! Always obey the rules of the road.<br>Obey all traffic signals, signs, and laws. Get in<br>the mindset of “driving” your bike—not just “riding”<br>your bike.This will help you be a more focused and<br>legally compliant bike rider. </p>
+              <p>We offer a wide variety of fresh and healthy products,<br>including vegetables, fruits, dairy, and organic options.</p>
             </div>
           </div>
           <!-- Question 2 -->
           <div class="collapse collapse-arrow bg-base-200 mb-1">
             <input type="radio" name="my-accordion-2" />
-            <div class="collapse-title text-xl font-medium">How can I tell if my helmet is old and <br> I need a 
-              new one?</div>
+            <div class="collapse-title text-xl font-medium">Do you offer delivery outside of the city?</div>
             <div class="collapse-content">
-              <p>hello</p>
+              <p>Currently, we only offer delivery within the city limits,<br>but we’re working on expanding our delivery range soon.</p>
             </div>
           </div>
           <!-- Question 3 -->
           <div class="collapse collapse-arrow bg-base-200 mb-1">
             <input type="radio" name="my-accordion-2" />
-            <div class="collapse-title text-xl font-medium">My bike has been in storage is it safe to ride?</div>
+            <div class="collapse-title text-xl font-medium">How can I track my order?</div>
             <div class="collapse-content">
-              <p>hello</p>
+              <p>You can track your order through the tracking link<br>provided in your confirmation email or by logging into your account.</p>
             </div>
           </div>
           <!-- Question 4 -->
           <div class="collapse collapse-arrow bg-base-200 mb-1">
             <input type="radio" name="my-accordion-2" />
-            <div class="collapse-title text-xl font-medium">What rules should I follow when riding my bike?</div>
+            <div class="collapse-title text-xl font-medium">Can I return a product if I’m not satisfied?</div>
             <div class="collapse-content">
-              <p>hello</p>
+              <p>Yes, we offer easy returns within 7 days of delivery<br>for any unsatisfactory products. Please contact our<br>customer service for assistance.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Grocery News Section -->
+     <section class="relative">
+      <div class="px-4 py-8 lg:px-20 lg:py-11 rounded-2xl bg-bg-color lg:flex justify-center items-center gap-20 absolute -top-96 left-0 sm:left-20 md:left-36 lg:left-20 lg:-top-52">
+        <!-- Image Container -->
+        <div>
+          <img src="./images/products/vegetable-busket.png" alt="Vegetable Busket">
+        </div>
+        <!-- Text Content -->
+        <div class="text-center">
+          <!-- Title  -->
+          <h3 class="text-3xl text-black-color font-semibold mb-4">Get Grocery News!</h3>
+          <!-- Description -->
+          <p class="text-black-color mb-7">Exclusive training tips, ticks, product deals and more.</p>
+          <!-- Email Input Section -->
+          <input type="email" placeholder="Enter email...." class="input w-full max-w-sm" />
+          <!-- Button -->
+          <a href="" class="btn bg-green-color text-white hover:text-green-color hover:border-green-color hover:bg-white mt-7">Subscribe</a>
+        </div>
+      </div>
+     </section>
+
   </main>
 
   <!-- Footer Section -->
-  <footer class="footer bg-green-color text-base-content px-28 pb-28 pt-72">
+  <footer class="footer bg-green-color text-base-content px-4 pb-28 pt-[300px] lg:pt-80">
     <nav>
       <div><a href="index.html" class="cursor-pointer"><img src="./images/logo/logo-footer.png" alt="FooterLogo"></a></div>
-      <p class="text-white">Discover a world of treats, toys, and<br>essentials handpicked for your furry friends</p>
+      <p class="text-white mt-2">Discover a world of treats, toys, and<br>essentials handpicked for your furry friends</p>
     </nav>
     <nav class="text-white space-y-4">
       <a class="cursor-pointer">Product</a>
